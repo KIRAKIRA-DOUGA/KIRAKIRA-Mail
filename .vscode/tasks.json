@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "npx tsx src/cli.ts --input-html src/email.html --output-html dist/email.html --output-css dist/email.css --tailwind-config tailwind.config.js",
+			"group": {
+				"kind": "build",
+			}
+		},
+		{
+			"type": "npm",
+			"script": "mailwind:inline",
+			"problemMatcher": [],
+			"label": "npm: mailwind:inline",
+			"detail": "mailwind --input-html src/email.html --output-html dist/email-inlined.html --tailwind-config tailwind.config.js",
+			"group": {
+				"kind": "build",
+			}
+		}
+	]
+}
