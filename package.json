@@ -17,10 +17,14 @@
 	"homepage": "https://github.com/KIRAKIRA-DOUGA/KIRAKIRA-Mail#readme",
 	"scripts": {
 		"dev": "maizzle serve",
-		"build": "maizzle build production"
+		"build": "maizzle build production && npm run minify-html",
+		"minify-html": "forfiles /p build_production /s /m *.html /c \"cmd /c npx html-minifier-terser -c ../html-minifier-terser.conf @path -o @path\""
 	},
-	"dependencies": {
+	"devDependencies": {
 		"@maizzle/framework": "latest",
+		"autoprefixer": "latest",
+		"html-minifier-terser": "latest",
+		"posthtml-inline-assets": "latest",
 		"tailwindcss-preset-email": "latest"
 	},
 	"keywords": [

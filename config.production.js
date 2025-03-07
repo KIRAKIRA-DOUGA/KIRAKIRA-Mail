@@ -9,6 +9,9 @@
 |
 */
 
+import posthtmlInlineAssets from "posthtml-inline-assets";
+import autoprefixer from "autoprefixer";
+
 /** @type {import("@maizzle/framework").Config} */
 export default {
 	build: {
@@ -21,5 +24,19 @@ export default {
 		purge: true,
 		shorthand: true,
 	},
-	prettify: true,
+	prettify: false,
+	minify: false, // minify will break CSS calc().
+	posthtml: {
+		plugins: {
+			before: [
+				posthtmlInlineAssets(),
+			],
+			after: [],
+		},
+	},
+	postcss: {
+		plugins: [
+			autoprefixer,
+		]
+	}
 };

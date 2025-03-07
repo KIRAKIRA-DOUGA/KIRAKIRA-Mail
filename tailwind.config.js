@@ -6,7 +6,11 @@ module.exports = {
 	presets: [
 		email,
 	],
-	content: ["./**/*.html"],
+	content: [
+		"./components/**/*.html",
+		"./emails/**/*.html",
+		"./layouts/**/*.html",
+	],
 	theme: {
 		extend: {
 			spacing: Object.fromEntries(
@@ -18,17 +22,13 @@ module.exports = {
 					];
 				}),
 			),
-			fontSize: {
-				heading2: "calc(1.325rem + 0.9vw)",
-				heading1: "calc(1.375rem + 1.5vw)",
+			colors: {
+				"card-bg": "rgb(255 255 255 / 75%)",
+				pink: "#f06e8e",
+				black: "#212121",
+				neutral: "#c19fa8",
+				"code-bg": "rgb(0 0 0 / 3%)"
 			},
-		},
-		colors: {
-			"card-bg": "rgb(255 255 255 / 75%)",
-			pink: "#f06e8e",
-			black: "#212121",
-			neutral: "#c19fa8",
-			"code-bg": "rgb(0 0 0 / 3%)"
 		},
 
 	},
@@ -43,6 +43,12 @@ module.exports = {
 				},
 				".min-h-screen": {
 					"min-height": "100vh",
+				},
+				".text-heading2": {
+					"font-size": ["2rem", "calc(1.325rem + 0.9vw)"],
+				},
+				".text-heading1": {
+					"font-size": ["2.5rem", "calc(1.375rem + 1.5vw)"],
 				},
 			});
 		}),

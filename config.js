@@ -15,7 +15,8 @@ export default {
 		content: ["emails/**/*.html"],
 		static: {
 			source: ["images/**/*.*"],
-			destination: "images",
+			destination: ".",
 		},
 	},
+	prettify: true,
 };
