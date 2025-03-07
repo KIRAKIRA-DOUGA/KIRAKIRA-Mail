@@ -50,6 +50,9 @@ module.exports = {
 				".text-heading1": {
 					"font-size": ["2.5rem", "calc(1.375rem + 1.5vw)"],
 				},
+				".text-paragraph": {
+					"font-size": ["1.125rem", "min(calc(0.75rem + 0.5vw), 1.125rem)"],
+				},
 			});
 		}),
 	],

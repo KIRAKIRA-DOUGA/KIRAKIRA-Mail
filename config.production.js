@@ -10,6 +10,7 @@
 */
 
 import posthtmlInlineAssets from "posthtml-inline-assets";
+import postcssUrl from "postcss-url";
 import autoprefixer from "autoprefixer";
 
 /** @type {import("@maizzle/framework").Config} */
@@ -28,15 +29,22 @@ export default {
 	minify: false, // minify will break CSS calc().
 	posthtml: {
 		plugins: {
-			before: [
-				posthtmlInlineAssets(),
+			before: [],
+			after: [
+				posthtmlInlineAssets({
+					cwd: "./images",
+					errors: "throw",
+				}),
 			],
-			after: [],
 		},
 	},
 	postcss: {
 		plugins: [
 			autoprefixer,
-		]
-	}
+			postcssUrl({
+				url: "inline",
+				basePath: "./images",
+			}),
+		],
+	},
 };
