@@ -5,7 +5,7 @@
 	"type": "module",
 	"author": "KIRAKIRA Project Team",
 	"license": "BSD-3-Clause",
-	"main": "dist/email-inlined.html",
+	"main": "build_production/verification.html",
 	"private": true,
 	"repository": {
 		"type": "git",
