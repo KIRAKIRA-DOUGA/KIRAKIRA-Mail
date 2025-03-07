@@ -1,0 +1,36 @@
+{
+	"name": "kirakira-mail",
+	"version": "1.0.0",
+	"description": "KIRAKIRA's verification email frontend",
+	"type": "module",
+	"author": "KIRAKIRA Project Team",
+	"license": "BSD-3-Clause",
+	"main": "dist/email-inlined.html",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KIRAKIRA-DOUGA/KIRAKIRA-Mail.git"
+	},
+	"bugs": {
+		"url": "https://github.com/KIRAKIRA-DOUGA/KIRAKIRA-Mail/issues"
+	},
+	"homepage": "https://github.com/KIRAKIRA-DOUGA/KIRAKIRA-Mail#readme",
+	"scripts": {
+		"clean": "rm -rf dist/{*.css,*.js,*.html}",
+		"dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+		"mailwind": "mailwind --input-html src/email.html --output-html dist/email.html --output-css dist/email.css --tailwind-config tailwind.config.js",
+		"mailwind:inline": "mailwind --input-html src/email.html --output-html dist/email-inlined.html --tailwind-config tailwind.config.js"
+	},
+	"devDependencies": {
+		"@types/node": "^22.13.9",
+		"autoprefixer": "^10.4.20",
+		"mailwind": "^2.2.0",
+		"postcss": "^8.5.3",
+		"rimraf": "^6.0.1",
+		"tailwindcss": "^3.4.17",
+		"tsx": "^4.19.3"
+	},
+	"keywords": [
+		"mail",
+		"email"
+	]
+}
