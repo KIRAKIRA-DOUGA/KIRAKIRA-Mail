@@ -1,2 +1,2 @@
 # KIRAKIRA-Mail
-KIRAKIRA's verification email frontend
+KIRAKIRA's email frontend

@@ -1,7 +1,7 @@
 {
 	"name": "kirakira-mail",
 	"version": "1.0.0",
-	"description": "KIRAKIRA's verification email frontend",
+	"description": "KIRAKIRA's email frontend",
 	"type": "module",
 	"author": "KIRAKIRA Project Team",
 	"license": "BSD-3-Clause",
