@@ -1,0 +1,16 @@
+<script props>
+	module.exports = {
+		src: props.source ?? "",
+		class: "bg-cover bg-center " + props.class ?? "",
+	};
+</script>
+
+<table background="{{ src }}" class="{{ class }}">
+	<tbody>
+		<tr>
+			<td>
+				<yield />
+			</td>
+		</tr>
+	</tbody>
+</table>
