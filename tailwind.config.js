@@ -44,6 +44,10 @@ module.exports = {
 				".min-h-screen": {
 					"min-height": "100vh",
 				},
+				".size-screen": {
+					"width": "100vw",
+					"height": "100vh",
+				},
 				".text-heading2": {
 					"font-size": ["2rem", "calc(1.325rem + 0.9vw)"],
 				},
