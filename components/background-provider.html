@@ -1,14 +1,21 @@
 <script props>
 	module.exports = {
 		src: props.source ?? "",
-		class: "bg-cover bg-center " + props.class ?? "",
+		class: "mso-table-space-0 " + props.class ?? "",
+		tdClass: "bg-cover bg-center " + props["td-class"] ?? "",
 	};
 </script>
 
-<table background="{{ src }}" class="{{ class }}">
+<!--[if gte mso 9]>
+	<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+		<v:fill type="frame" src="{{ src }}" />
+	</v:background>
+<![endif]-->
+
+<table class="{{ class }}" cellpadding="0" cellspacing="0" border="0">
 	<tbody>
 		<tr>
-			<td>
+			<td class="{{ tdClass }}" style="background-image: url('{{ src }}');">
 				<yield />
 			</td>
 		</tr>

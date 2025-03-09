@@ -57,6 +57,10 @@ module.exports = {
 				".text-paragraph": {
 					"font-size": ["1.125rem", "min(calc(0.75rem + 0.5vw), 1.125rem)"],
 				},
+				".mso-table-space-0": {
+					"mso-table-lspace": "0pt",
+					"mso-table-rspace": "0pt",
+				},
 			});
 		}),
 	],
